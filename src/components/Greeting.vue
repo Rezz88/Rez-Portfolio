@@ -7,17 +7,39 @@
     </div>
   </div>
   <span class="scroll">▽ SCROLL ▽</span>
+  <div class="about">
+    <p class="about-text">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore sed
+      veniam illo praesentium exercitationem enim sequi, dolorem, consequatur
+      ducimus doloribus deserunt, minima maiores. Voluptates amet cumque omnis,
+      dolore in ut? lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Inventore sed veniam illo praesentium exercitationem enim sequi, dolorem,
+      consequatur ducimus doloribus deserunt, minima maiores. Voluptates amet
+      cumque omnis, dolore in ut? Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Maxime similique nemo cupiditate maiores reprehenderit
+      sunt repellendus autem animi, atque ullam reiciendis dolores ipsam illo
+      nisi ducimus quasi dolore aut! Deserunt. Tempore aspernatur magnam numquam
+      natus dolores illum quos, sunt rem, pariatur optio excepturi. Nam
+      repudiandae, voluptatem totam fugiat aliquid fuga eligendi vitae, est
+      ducimus magnam voluptatum, optio quidem earum unde. Qui esse fuga magnam,
+      ut blanditiis iusto incidunt. Accusantium ipsum, eligendi ipsa ad iusto
+      similique veniam provident minus reprehenderit, officiis tenetur, et
+      architecto explicabo quod libero adipisci? Iure, placeat fuga?
+    </p>
+  </div>
 </template>
+
+<script setup lang="ts"></script>
 
 <style>
 .greetings {
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  padding-right: 10%;
-  animation: fadeInAnimation ease 4s;
-  animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation: fadeInAnimation ease 4s;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  padding-right: 10%;
 }
 
 @keyframes fadeInAnimation {
@@ -37,8 +59,8 @@
 }
 
 .greetings-text {
-  padding-top: 6rem;
   animation: fadeInRight ease 4s;
+  padding-top: 6rem;
 }
 
 @keyframes fadeInRight {
@@ -59,10 +81,10 @@ h5 {
 }
 
 .scroll {
+  animation: scroll 3s ease infinite;
   display: flex;
   justify-content: center;
   padding-top: 8rem;
-  animation: scroll 3s ease infinite;
 }
 
 @keyframes scroll {
@@ -92,6 +114,54 @@ h5 {
   100% {
     opacity: 0;
     transform: translateY(0);
+  }
+}
+
+.fadeOut {
+  animation: fadeOut ease 2s;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.about-text {
+  width: 60%;
+  line-height: 2rem;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 940px) {
+  .greetings {
+    font-size: 2.5rem;
+    padding-right: 0;
+  }
+  .greetings-text {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .greetings {
+    font-size: 1.5rem;
+    padding-right: 0;
+  }
+  .greetings-text {
+    padding-top: 2rem;
   }
 }
 </style>

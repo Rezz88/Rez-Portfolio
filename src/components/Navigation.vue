@@ -20,11 +20,11 @@
 
 <style scoped>
 .container {
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation: fadeInAnimation ease 2s;
   display: flex;
   justify-content: center;
-  animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
@@ -86,5 +86,33 @@ a:focus {
   border-bottom: 3px solid gold;
   padding-bottom: 1.2rem;
   transition: 0.1s ease-in-out;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 840px) {
+  .nav-content {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .nav-links {
+    display: block;
+  }
+
+  .nav-logo {
+    transform: translateY(0);
+  }
+
+  a:focus {
+    border-bottom: none;
+  }
+
+  li {
+    padding: 0.5rem;
+  }
 }
 </style>
